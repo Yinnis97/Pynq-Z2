@@ -67,10 +67,23 @@ Check the status again to confirm it is running:
 ```bash
 sudo systemctl status ssh
 ```
+If it's showing :
+```bash
+Active : active (running)
+```
 
-### 4. Try logging in via SSH again
-If the SSH service is active, you should now be able to log in using SSH.  
-If you're still experiencing issues, there may be another underlying problem.  
-Make sure your SSH service is listening on the correct IP that you're using to log in.
+You are good to go and your SSH service is active.
+You should now be able to log in using SSH.  
 
+### 4. Other problems
+
+**If you're still experiencing issues, there may be another underlying problem.**  
+1. Make sure your SSH service is listening on the correct IP that you're using to log in.   
+2. If you're sharing your network from your PC/Laptop, try resharing it. (Turn sharing off and back on) 
+
+
+### 5. Still stuck
+If you're still unable to resolve the issue or connect, there might be an underlying problem that hasn't been addressed yet.
+All the issues I've personally encountered are documented here. 
+If your specific problem isn't listed, I recommend looking it up online or consulting someone with more experience for guidance.
 
