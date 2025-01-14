@@ -52,7 +52,7 @@ tailscale ip -4
 **Register a node with the auth key**
 
 ```bash
-sudo tailscale up --auth-key=tskey-abcdef1432341818
+sudo tailscale up --authkey tskey-auth-123456789...
 ```
 
 ## Sources
