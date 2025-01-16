@@ -80,6 +80,7 @@ You should now be able to log in using SSH.
 **If you're still experiencing issues, there may be another underlying problem.**  
 1. Make sure your SSH service is listening on the correct IP that you're using to log in.   
 2. If you're sharing your network from your PC/Laptop, try resharing it. (Turn sharing off and back on) 
+3. Switch sharing to Ethernet ,Ethernet 3 ,etc. Switching it up and reconnecting to the first one may fix it.
 
 
 ### 5. Still stuck
