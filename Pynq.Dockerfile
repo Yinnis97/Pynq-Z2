@@ -1,5 +1,5 @@
 # Use an appropriate ARM base image
-FROM arm32v7/python:3.8-slim
+FROM arm32v7/python:3.10-slim
 
 # Set environment variables
 ENV PYTHONUNBUFFERED=1
