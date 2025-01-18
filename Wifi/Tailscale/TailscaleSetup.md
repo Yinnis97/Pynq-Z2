@@ -1,4 +1,4 @@
-# Installing Tailscale on Pynq Z2
+# **Installing Tailscale on Pynq Z2**
 
 
 ## Installation

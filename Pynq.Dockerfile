@@ -14,24 +14,18 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-# Install the Pynq library
-RUN pip install --no-cache-dir pynq
-
-# Install the Pynq library and IPython
-RUN pip install --no-cache-dir pynq IPython
+# Install Python libraries
+RUN pip install --no-cache-dir pynq IPython numpy
 
 # Copy the `base.bit` overlay into the appropriate location for the Pynq library
 # This assumes you have the `base.bit` file in your project directory
-COPY base.bit /usr/local/share/pynq-venv/lib/python3.10/site-packages/pynq/overlays/base
+# COPY base.bit /usr/local/share/pynq-venv/lib/python3.10/site-packages/pynq/overlays/base
 
 # Copy your Python script into the container
 COPY example_script.py /app/example_script.py
 
 # Set the working directory
 WORKDIR /app
-
-# Install additional Python dependencies if needed (e.g., numpy)
-RUN pip install --no-cache-dir numpy
 
 # Set the default command to run your Python script
 CMD ["python", "example_script.py"]

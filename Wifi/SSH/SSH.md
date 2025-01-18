@@ -1,4 +1,4 @@
-# SSH Guide
+# **SSH Guide**
 
 ## Logging into the PYNQ Board Using SSH
 

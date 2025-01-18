@@ -1,6 +1,6 @@
 # **How to create a systemd Service file (With Timer)**
 
-## 1. 1. Create the Systemd Service File
+## 1. Create the Systemd Service File
 **First, create a systemd service that pulls and runs the Docker container. This will be executed by the timer.**
 
 - Navigate to /etc/systemd/system/:
@@ -25,11 +25,20 @@
     Type=oneshot
     ExecStartPre=/usr/bin/docker pull ghcr.io/yinnis97/pynq-z2:main
     ExecStart=/usr/bin/docker run --rm ghcr.io/yinnis97/pynq-z2:main
+    StandardOutput=append:/var/log/pynq-docker.log
+    StandardError=append:/var/log/pynq-docker.log
     ```
 
     Explanation:
-    This service does the same as before: it pulls the Docker image and runs the container once.
-    
+    - This service does the same as before: it pulls the Docker image and runs the container once.
+    - **StandardOutput=append:/var/log/pynq-docker.log:** Appends standard output (e.g., print statements from example_script.py) to the specified log file.
+    - **StandardError=append:/var/log/pynq-docker.log:** Appends error messages to the same log file.  
+
+    View the log file:
+    ```bash
+    cat /var/log/pynq-docker.log
+    ```
+
 - Save and exit the file (CTRL+O, then CTRL+X).
 
 ## 2. Create a Systemd Timer

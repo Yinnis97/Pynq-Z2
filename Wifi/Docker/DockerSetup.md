@@ -1,5 +1,5 @@
 
-# Installing Docker on Pynq Z2
+# **Installing Docker on Pynq Z2**
 **Docker out-of-box allows users to run some simple images to see docker working.**  
 **For PYNQ v2.6 images – copy/paste the steps below to get the helloworld applications running.**
 
