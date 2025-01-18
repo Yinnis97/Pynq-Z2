@@ -7,7 +7,7 @@
 
 
 print("Running on Pynq Z2!")
-print("Test !")
+print("Het werkt !")
 
 #if __name__ == "__main__":
     #main()
